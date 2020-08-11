@@ -11,6 +11,7 @@ lazy val `akka-sample-cqrs-scala` = project
     scalaVersion := "2.13.1",
     scalacOptions in Compile ++= Seq("-deprecation", "-feature", "-unchecked", "-Xlog-reflective-calls", "-Xlint"),
     javacOptions in Compile ++= Seq("-Xlint:unchecked", "-Xlint:deprecation"),
+    //tag::libraryDependencies[]
     libraryDependencies ++= Seq(
         "com.typesafe.akka" %% "akka-cluster-sharding-typed" % AkkaVersion,
         "com.typesafe.akka" %% "akka-persistence-typed" % AkkaVersion,
@@ -29,6 +30,7 @@ lazy val `akka-sample-cqrs-scala` = project
         "com.lightbend.akka" %% "akka-projection-testkit" % AkkaProjectionVersion % Test,
         "org.scalatest" %% "scalatest" % "3.1.0" % Test,
         "commons-io" % "commons-io" % "2.4" % Test),
+    //end::libraryDependencies[]
     fork in run := false,
     Global / cancelable := false, // ctrl-c
     mainClass in (Compile, run) := Some("sample.cqrs.Main"),

@@ -16,6 +16,7 @@
     </license>
   </licenses>
 
+  <!-- tag::dependencies[] -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <akka.version>2.6.8</akka.version>
@@ -23,7 +24,7 @@
     <akka-http.version>10.1.10</akka-http.version>
     <akka-projection.version>0.3</akka-projection.version>
   </properties>
-  
+
   <dependencies>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
@@ -120,6 +121,7 @@
     </dependency>
 
   </dependencies>
+  <!-- end::dependencies[] -->
 
   <build>
     <plugins>
